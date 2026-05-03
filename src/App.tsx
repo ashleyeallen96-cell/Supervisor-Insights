@@ -130,7 +130,7 @@ export default function App() {
           const avg = (field: string) => {
             const nums = entries
               .map((e: any) => Number(e.ratings[field]))
-              .filter((n) => !isNaN(n));
+              .filter((n: number) => !isNaN(n));
             return nums.length
               ? (nums.reduce((a, b) => a + b, 0) / nums.length).toFixed(1)
               : "N/A";
