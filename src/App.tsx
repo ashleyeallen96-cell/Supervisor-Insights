@@ -131,9 +131,9 @@ export default function App() {
             const nums = entries
               .map((e: any) => Number(e.ratings[field]))
               .filter((n: number) => !isNaN(n));
-            return nums.length
-              ? (nums.reduce((a, b) => a + b, 0) / nums.length).toFixed(1)
-              : "N/A";
+            return return nums.length
+  ? (nums.reduce((a: number, b: number) => a + b, 0) / nums.length).toFixed(1)
+  : "N/A";
           };
           const supportScore = (
             (Number(avg("Emotional Safety")) +
