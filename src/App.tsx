@@ -127,14 +127,18 @@ export default function App() {
         <h2>Supervisor Results</h2>
         {Object.keys(grouped).map((key) => {
           const entries = grouped[key];
-          const avg = (field: string) => {
-            const nums = entries
-              .map((e: any) => Number(e.ratings[field]))
-              .filter((n: number) => !isNaN(n));
-            return return nums.length
-  ? (nums.reduce((a: number, b: number) => a + b, 0) / nums.length).toFixed(1)
-  : "N/A";
-          };
+    const avg = (field: string) => {
+  const nums = entries
+    .map((e: any) => Number(e.ratings[field]))
+    .filter((n: number) => !isNaN(n));
+
+  return nums.length
+    ? (
+        nums.reduce((a: number, b: number) => a + b, 0) /
+        nums.length
+      ).toFixed(1)
+    : "N/A";
+};
           const supportScore = (
             (Number(avg("Emotional Safety")) +
               Number(avg("Feedback")) +
