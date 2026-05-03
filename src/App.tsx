@@ -13,7 +13,7 @@ const COLORS = {
 
 export default function App() {
   const [page, setPage] = useState("home");
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
     const saved = localStorage.getItem("ratings");
