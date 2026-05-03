@@ -62,8 +62,6 @@ export default function App() {
               color: page === p ? COLORS.primary : "white",
               fontWeight: 500,
               boxShadow: page === p ? "0 2px 8px rgba(0,0,0,0.15)" : "none",
-
-              color: "white",
               transition: "all 0.3s ease",
             }}
           >
